@@ -1,0 +1,6 @@
+framework module Pods_PizzaMe_ {
+  umbrella header "Pods-PizzaMe!-umbrella.h"
+
+  export *
+  module * { export * }
+}
