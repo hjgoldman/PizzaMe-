@@ -21,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZIY-y1-f3D">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="8H7-Ur-fgK"/>
-                                    <constraint firstAttribute="height" constant="37" id="KNi-BL-lJ2"/>
-                                </constraints>
-                                <color key="color" red="0.022412020713090897" green="0.027954487130045891" blue="0.010272384621202946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2O-iR-CZa">
                                 <rect key="frame" x="83" y="221" width="208" height="224"/>
                                 <constraints>
@@ -40,6 +32,14 @@
                                     <action selector="getPizzaButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OO7-m2-V35"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZIY-y1-f3D">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="8H7-Ur-fgK"/>
+                                    <constraint firstAttribute="height" constant="37" id="KNi-BL-lJ2"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.80294519662857056" green="0.9478415846824646" blue="0.80405443906784058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

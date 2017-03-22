@@ -37,7 +37,6 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate {
         sleep(2);
         self.findClosestPizza()
         
-        
     }
     
     

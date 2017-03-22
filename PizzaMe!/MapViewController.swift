@@ -27,7 +27,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         
-        self.getTacoLocations()
+        self.getPizzaLocations()
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -37,13 +37,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "PizzaAnnotation")
-        annotationView.frame = CGRect(x: 0, y: 0, width: 50, height: 20)
+        annotationView.frame = CGRect(x: 0, y: 0, width: 25, height: 30)
         annotationView.canShowCallout = true
         annotationView.rightCalloutAccessoryView = UIButton.init(type: .infoDark)
         
         let pizzaImage = UIImage(named: "pizza_annotation.png")
         let pizzaImageView = UIImageView(image: pizzaImage)
-        pizzaImageView.frame = CGRect(x: 0, y: 0, width: 50, height: 20)
+        pizzaImageView.frame = CGRect(x: 0, y: 0, width: 25, height: 30)
         
         
         annotationView.addSubview(pizzaImageView)
@@ -69,7 +69,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-    func getTacoLocations() {
+    func getPizzaLocations() {
         
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "pizza"
