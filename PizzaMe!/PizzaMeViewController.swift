@@ -10,12 +10,13 @@ import UIKit
 import MapKit
 import RandomColorSwift
 
-class PizzaMeViewController: UIViewController, CLLocationManagerDelegate {
+class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var indicatorView :UIActivityIndicatorView!
     var locationManager = CLLocationManager()
     var pizzaLocations = [PizzaLocation]()
     var closestPizza = PizzaLocation()
+    var fadeTransition = FadeTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,6 +158,24 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    //Custom segue
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return nil
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return self.fadeTransition
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let mapVC = segue.destination as! MapViewController
+        mapVC.transitioningDelegate = self
+        
+    }
     
     
     

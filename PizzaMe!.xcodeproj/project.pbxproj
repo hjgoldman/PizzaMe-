@@ -17,6 +17,7 @@
 		C68720181E8208B500351017 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720171E8208B500351017 /* MapViewController.swift */; };
 		C687201B1E820AB700351017 /* pizza_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C68720191E820AB700351017 /* pizza_annotation.png */; };
 		C687201C1E820AB700351017 /* pizza_me.png in Resources */ = {isa = PBXBuildFile; fileRef = C687201A1E820AB700351017 /* pizza_me.png */; };
+		C68BE09F1E844FA500C3E643 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68BE09E1E844FA500C3E643 /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C68720171E8208B500351017 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C68720191E820AB700351017 /* pizza_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_annotation.png; sourceTree = "<group>"; };
 		C687201A1E820AB700351017 /* pizza_me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_me.png; sourceTree = "<group>"; };
+		C68BE09E1E844FA500C3E643 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				C68720081E8207A700351017 /* LaunchScreen.storyboard */,
 				C687200B1E8207A700351017 /* Info.plist */,
 				C68720131E82089400351017 /* PizzaLocation.swift */,
+				C68BE09E1E844FA500C3E643 /* FadeTransition.swift */,
 			);
 			path = "PizzaMe!";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C68720001E8207A700351017 /* AppDelegate.swift in Sources */,
+				C68BE09F1E844FA500C3E643 /* FadeTransition.swift in Sources */,
 				C68720161E8208A600351017 /* PizzaMeViewController.swift in Sources */,
 				C68720141E82089400351017 /* PizzaLocation.swift in Sources */,
 				C68720181E8208B500351017 /* MapViewController.swift in Sources */,
