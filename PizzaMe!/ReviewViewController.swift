@@ -71,7 +71,7 @@ class ReviewViewController: UIViewController{
                         
                         let review = Review()
                         review.author_name = snapshotDictionary["author_name"] as? String
-                        review.isTacoMeReview = snapshotDictionary["isTacoMeReview"] as? Bool
+                        review.isPizzaMeReview = snapshotDictionary["isPizzaMeReview"] as? Bool
                         review.rating = snapshotDictionary["rating"] as? Int
                         
                         self.accumulatedFireBaseRatings += review.rating!
@@ -209,8 +209,8 @@ class ReviewViewController: UIViewController{
                     fatalError("Could not find AddReviewViewController")
                 }
                 
-                addReviewVC.tacoLocationPlace_id = self?.locationPlace_id
-                addReviewVC.tacoLocationDetail = (self?.locationDetail)!
+                addReviewVC.pizzaLocationPlace_id = self?.locationPlace_id
+                addReviewVC.pizzaLocationDetail = (self?.locationDetail)!
                 
                 strongSelf.present(addReviewVC, animated: true, completion: nil)
                 

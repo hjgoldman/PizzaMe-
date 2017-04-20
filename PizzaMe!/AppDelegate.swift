@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyDebPah6TW5Nn6ZOpwAlmy2-H8Ivc9V00g")
-        GMSPlacesClient.provideAPIKey("AIzaSyDebPah6TW5Nn6ZOpwAlmy2-H8Ivc9V00g")
+        GMSServices.provideAPIKey("AIzaSyDKyl7YAw0ytQ-Bh0iDpwBd_ot1yHrjG-k")
+        GMSPlacesClient.provideAPIKey("AIzaSyDKyl7YAw0ytQ-Bh0iDpwBd_ot1yHrjG-k")
         FIRApp.configure()
         
         UINavigationBar.appearance().barTintColor = UIColor(fromHexString: "6E90DE")

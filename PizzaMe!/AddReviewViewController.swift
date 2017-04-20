@@ -23,9 +23,9 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate, UITextView
     var imageArray: [UIImage] = [UIImage(named: "1_stars.png")!, UIImage(named: "2_stars.png")!,UIImage(named: "3_stars.png")!,UIImage(named: "4_stars.png")!,UIImage(named: "5_stars.png")!]
     var selectedRowIndex :Int!
     var selectedRating :Int!
-    var tacoLocationPlace_id :String!
+    var pizzaLocationPlace_id :String!
     var reviews = [Any]()
-    var tacoLocationDetail = LocationDetail()
+    var pizzaLocationDetail = LocationDetail()
     
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate, UITextView
     
     func populateView() {
         
-        self.nameLabel.text = self.tacoLocationDetail.name
+        self.nameLabel.text = self.pizzaLocationDetail.name
     }
     
     
@@ -96,7 +96,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate, UITextView
         let ref = FIRDatabase.database().reference(withPath: "reviews")
         ref.observe(.value) { (snapshot :FIRDataSnapshot) in
             
-            let locationInDB = snapshot.childSnapshot(forPath: self.tacoLocationPlace_id!)
+            let locationInDB = snapshot.childSnapshot(forPath: self.pizzaLocationPlace_id!)
             
             if locationInDB.exists() == true {
                 
@@ -108,7 +108,7 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate, UITextView
                     
                     let review = Review()
                     review.author_name = snapshotDictionary["author_name"] as? String
-                    review.isTacoMeReview = snapshotDictionary["isTacoMeReview"] as? Bool
+                    review.isPizzaMeReview = snapshotDictionary["isPizzaMeReview"] as? Bool
                     review.rating = snapshotDictionary["rating"] as? Int
                     review.text = snapshotDictionary["text"] as? String
                     review.relative_time_description = snapshotDictionary["relative_time_description"] as? String
@@ -125,14 +125,14 @@ class AddReviewViewController: UIViewController, UITextFieldDelegate, UITextView
         
         let ref = FIRDatabase.database().reference(withPath: "reviews")
         
-        let reviewRef = ref.child(self.tacoLocationPlace_id!)
+        let reviewRef = ref.child(self.pizzaLocationPlace_id!)
         
         let review = Review()
         
         review.author_name = self.nameTextField.text!
         review.rating = self.selectedRating!
         review.text = self.reviewTextTextView.text!
-        review.isTacoMeReview = true
+        review.isPizzaMeReview = true
         
         let uglyDate = String(describing: Date())
         //formatting the date

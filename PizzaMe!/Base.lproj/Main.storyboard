@@ -22,32 +22,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33p-Mh-Sr3">
-                                <rect key="frame" x="100" y="280" width="174" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="Li6-BY-yFb"/>
-                                    <constraint firstAttribute="width" constant="174" id="RNv-EM-sOu"/>
-                                </constraints>
-                                <state key="normal" image="pizza_me.png"/>
-                                <connections>
-                                    <action selector="getTacoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuZ-9a-Tru"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-XN-Q3y">
-                                <rect key="frame" x="169" y="243" width="37" height="37"/>
+                                <rect key="frame" x="169" y="208" width="37" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="4Pm-Gx-SXb"/>
-                                    <constraint firstAttribute="width" constant="37" id="VoZ-9V-G6T"/>
+                                    <constraint firstAttribute="width" constant="37" id="BUT-5B-cMz"/>
+                                    <constraint firstAttribute="height" constant="37" id="R21-8m-rOS"/>
                                 </constraints>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33p-Mh-Sr3">
+                                <rect key="frame" x="100" y="245" width="174" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="irg-b5-XRJ"/>
+                                    <constraint firstAttribute="height" constant="176" id="jNC-PZ-fjB"/>
+                                </constraints>
+                                <state key="normal" image="pizza_me.png"/>
+                                <connections>
+                                    <action selector="getPizzaButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AF2-kd-44Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96047013998031616" green="0.89431089162826538" blue="0.97426563501358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zs3-vf-h5u"/>
-                            <constraint firstItem="uN7-XN-Q3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bm4-ju-IKT"/>
-                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rh4-GB-AX9"/>
-                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="top" secondItem="uN7-XN-Q3y" secondAttribute="bottom" id="s3G-bF-vOD"/>
+                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DVA-dx-BJ0"/>
+                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTa-Ud-t4H"/>
+                            <constraint firstItem="uN7-XN-Q3y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Snv-9A-rds"/>
+                            <constraint firstItem="33p-Mh-Sr3" firstAttribute="top" secondItem="uN7-XN-Q3y" secondAttribute="bottom" id="lhi-SC-S7x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a45-xC-g8A"/>

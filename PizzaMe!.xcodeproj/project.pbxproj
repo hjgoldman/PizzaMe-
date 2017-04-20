@@ -51,6 +51,7 @@
 		C69B0DC01EA94AB5003FE233 /* 2_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAD1EA94AB5003FE233 /* 2_stars.png */; };
 		C69B0DC11EA94AB5003FE233 /* 3_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAE1EA94AB5003FE233 /* 3_stars.png */; };
 		C69B0DC21EA94AB5003FE233 /* 5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAF1EA94AB5003FE233 /* 5_stars.png */; };
+		C69B0DC41EA95111003FE233 /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		C69B0DAD1EA94AB5003FE233 /* 2_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_stars.png; sourceTree = "<group>"; };
 		C69B0DAE1EA94AB5003FE233 /* 3_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_stars.png; sourceTree = "<group>"; };
 		C69B0DAF1EA94AB5003FE233 /* 5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5_stars.png; sourceTree = "<group>"; };
+		C69B0DC31EA95111003FE233 /* pizza_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_marker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		C68720121E82087800351017 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C69B0DC31EA95111003FE233 /* pizza_marker.png */,
 				C69B0D9D1EA94AB5003FE233 /* marker_background.png */,
 				C69B0D9E1EA94AB5003FE233 /* thumb-up.png */,
 				C69B0D9F1EA94AB5003FE233 /* info.png */,
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C687200A1E8207A700351017 /* LaunchScreen.storyboard in Resources */,
+				C69B0DC41EA95111003FE233 /* pizza_marker.png in Resources */,
 				C69B0DB21EA94AB5003FE233 /* info.png in Resources */,
 				C69B0DBA1EA94AB5003FE233 /* 0_5_stars.png in Resources */,
 				C69B0DBC1EA94AB5003FE233 /* 3_5_stars.png in Resources */,

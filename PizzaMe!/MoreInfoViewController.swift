@@ -133,7 +133,7 @@ class MoreInfoViewController: UIViewController {
                 review.rating = rating
                 review.relative_time_description = relative_time_description
                 review.text = text
-                review.isTacoMeReview = false
+                review.isPizzaMeReview = false
                 
                 self.reviewsRx.value.append(review)
                 

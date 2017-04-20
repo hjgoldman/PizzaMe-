@@ -35,7 +35,7 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
         self.indicatorView.isHidden = true
     }
     
-    func findAllTheTacos() {
+    func findAllThePizzas() {
         
         self.indicatorView.isHidden = false
         self.indicatorView.startAnimating()
@@ -54,7 +54,7 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
                     
                     
                     // Create the alert controller
-                    let alertController = UIAlertController(title: "No Taco Found", message:  "☹️", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "No Pizza Found", message:  "☹️", preferredStyle: .alert)
                     
                     // Create the actions
                     
@@ -73,9 +73,9 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
                 } else {
                     
                     
-                    let closestTaco = self.locations[0]
+                    let closestPizza = self.locations[0]
                     
-                    guard let distance = closestTaco.distanceFromUser else {
+                    guard let distance = closestPizza.distanceFromUser else {
                         return
                     }
                     
@@ -83,10 +83,10 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
                     
                     
                     // Create the alert controller
-                    let alertController = UIAlertController(title: "Taco Found!", message:  "Closest Taco: \n \(closestTaco.name!) \n \(distanceInMiles) miles away", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Pizza Found!", message:  "Closest Pizza: \n \(closestPizza.name!) \n \(distanceInMiles) miles away", preferredStyle: .alert)
                     
                     // Create the actions
-                    let moreTacoAction = UIAlertAction(title: "🌮", style: UIAlertActionStyle.default) {
+                    let morePizzaAction = UIAlertAction(title: "🍕", style: UIAlertActionStyle.default) {
                         UIAlertAction in
                         
                         self.performSegue(withIdentifier: "GoogleMapsSegue", sender: self)
@@ -98,7 +98,7 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
                     }
                     
                     // Add the actions
-                    alertController.addAction(moreTacoAction)
+                    alertController.addAction(morePizzaAction)
                     alertController.addAction(cancelAction)
                     
                     // Present the controller
@@ -110,8 +110,8 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
     }
     
     
-    @IBAction func getTacoButtonPressed(_ sender: Any) {
-        self.findAllTheTacos()
+    @IBAction func getPizzaButtonPressed(_ sender: Any) {
+        self.findAllThePizzas()
     }
     
     //MARK: Custom segue
@@ -207,13 +207,13 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
             }
             
             print(self.locations.count)
-            self.findClosestTaco()
+            self.findClosestPizza()
         })
         dataTask.resume()
     }
     
     //Finding the location that is closest to the user
-    func findClosestTaco() {
+    func findClosestPizza() {
         
         var distances = [Double]()
         //looping to get all the location distance from user

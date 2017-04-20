@@ -13,9 +13,9 @@ class Review {
     var relative_time_description :String?
     var text :String?
     var author_name :String?
-    var isTacoMeReview :Bool?
+    var isPizzaMeReview :Bool?
     
     func toDictionary() -> [String:Any] {
-        return ["rating":self.rating!,"relative_time_description":self.relative_time_description!,"text":self.text!,"author_name":self.author_name!,"isTacoMeReview":self.isTacoMeReview!]
+        return ["rating":self.rating!,"relative_time_description":self.relative_time_description!,"text":self.text!,"author_name":self.author_name!,"isTacoMeReview":self.isPizzaMeReview!]
     }
 }

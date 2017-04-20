@@ -33,6 +33,9 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
+        let markerImage = self.imageWithImage(sourceImage: UIImage(named: "pizza_annotation.png")!, scaledToWidth: 30.0)
+
+        
         for location in self.locations {
             
             let marker = GMSMarker()
@@ -52,7 +55,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             }
             marker.userData = location
             
-            marker.icon = UIImage(named: "pizza_annotation.png")
+           // marker.icon = UIImage(named: "pizza_marker.png")
+            marker.icon = markerImage
             marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.2)
             
             marker.map = mapView
@@ -98,6 +102,20 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             arVC.locations = self.locations
             
         }
+    }
+    
+    func imageWithImage (sourceImage:UIImage, scaledToWidth: CGFloat) -> UIImage {
+        let oldWidth = sourceImage.size.width
+        let scaleFactor = scaledToWidth / oldWidth
+        
+        let newHeight = sourceImage.size.height * scaleFactor
+        let newWidth = oldWidth * scaleFactor
+        
+        UIGraphicsBeginImageContext(CGSize(width:newWidth, height:newHeight))
+        sourceImage.draw(in: CGRect(x:0, y:0, width:newWidth, height:newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
     }
     
 }
