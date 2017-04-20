@@ -6,6 +6,13 @@ target 'PizzaMe!' do
   use_frameworks!
 
   # Pods for PizzaMe!
-pod 'RandomColorSwift'
-
+  pod 'RandomColorSwift'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'HDAugmentedReality', :git => 'https://github.com/DanijelHuis/HDAugmentedReality.git'
+  pod 'RxSwift',    '~> 3.0'
+  pod 'RxCocoa',    '~> 3.0'
 end

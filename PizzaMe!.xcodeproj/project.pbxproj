@@ -18,6 +18,7 @@
 		C687201B1E820AB700351017 /* pizza_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C68720191E820AB700351017 /* pizza_annotation.png */; };
 		C687201C1E820AB700351017 /* pizza_me.png in Resources */ = {isa = PBXBuildFile; fileRef = C687201A1E820AB700351017 /* pizza_me.png */; };
 		C68BE09F1E844FA500C3E643 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68BE09E1E844FA500C3E643 /* FadeTransition.swift */; };
+		C69B0D7A1EA9456E003FE233 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C68720191E820AB700351017 /* pizza_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_annotation.png; sourceTree = "<group>"; };
 		C687201A1E820AB700351017 /* pizza_me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_me.png; sourceTree = "<group>"; };
 		C68BE09E1E844FA500C3E643 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				C687200B1E8207A700351017 /* Info.plist */,
 				C68720131E82089400351017 /* PizzaLocation.swift */,
 				C68BE09E1E844FA500C3E643 /* FadeTransition.swift */,
+				C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */,
 			);
 			path = "PizzaMe!";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				C68720071E8207A700351017 /* Assets.xcassets in Resources */,
 				C68720051E8207A700351017 /* Main.storyboard in Resources */,
 				C687201B1E820AB700351017 /* pizza_annotation.png in Resources */,
+				C69B0D7A1EA9456E003FE233 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +239,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -375,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UN8LHXK2J;
 				INFOPLIST_FILE = "PizzaMe!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UN8LHXK2J;
 				INFOPLIST_FILE = "PizzaMe!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-";
 				PRODUCT_NAME = "$(TARGET_NAME)";

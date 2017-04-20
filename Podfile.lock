@@ -1,12 +1,73 @@
 PODS:
+  - Firebase/Core (3.14.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.1)
+  - Firebase/Database (3.14.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.2)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.5.1):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (3.1.2):
+    - FirebaseAnalytics (~> 3.7)
+  - FirebaseInstanceID (1.0.9)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.2.0):
+    - GoogleMaps (= 2.2.0)
+    - GooglePlaces (= 2.2.0)
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - HDAugmentedReality (1.1.2)
   - RandomColorSwift (1.0.0)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
 
 DEPENDENCIES:
+  - Firebase/Core
+  - Firebase/Database
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - HDAugmentedReality (from `https://github.com/DanijelHuis/HDAugmentedReality.git`)
   - RandomColorSwift
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+
+EXTERNAL SOURCES:
+  HDAugmentedReality:
+    :git: https://github.com/DanijelHuis/HDAugmentedReality.git
+
+CHECKOUT OPTIONS:
+  HDAugmentedReality:
+    :commit: c8786528fd55d4193adc2036029a6769b7765b47
+    :git: https://github.com/DanijelHuis/HDAugmentedReality.git
 
 SPEC CHECKSUMS:
+  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
+  FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  HDAugmentedReality: 7e44eba603d3ff71bd3d7698bcf1bd7e66b98a1d
   RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: f9cef526310cccddc580be3d6be690d7b86b78d1
+PODFILE CHECKSUM: 5ec272d81dd6d3a1c9201867e2be2ff88e292e97
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
