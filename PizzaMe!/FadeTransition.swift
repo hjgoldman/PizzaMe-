@@ -10,29 +10,19 @@ import Foundation
 import UIKit
 
 class FadeTransition :NSObject, UIViewControllerAnimatedTransitioning {
-    
-    let durantion = 1.0
-    
+    let durantion = 1.5
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return durantion
     }
-    
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
         let containerView = transitionContext.containerView
         let toView = transitionContext.view(forKey: .to)
-        
         toView?.alpha = 0
         containerView.addSubview(toView!)
-        
         UIView.animate(withDuration: durantion, animations: {
-            
             toView?.alpha = 1
-            
         }) { (_) in
-            
             transitionContext.completeTransition(true)
-            
         }
     }
 }

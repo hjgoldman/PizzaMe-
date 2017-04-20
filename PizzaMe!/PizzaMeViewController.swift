@@ -12,10 +12,9 @@ import RandomColorSwift
 
 class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var indicatorView :UIActivityIndicatorView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     var locationManager = CLLocationManager()
-    var pizzaLocations = [PizzaLocation]()
-    var closestPizza = PizzaLocation()
+    var locations = [Location]()
     var fadeTransition = FadeTransition()
     
     override func viewDidLoad() {
@@ -28,137 +27,94 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
         self.locationManager.startUpdatingLocation()
         
         self.view.backgroundColor = randomColor(hue: .random, luminosity: .light)
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         self.indicatorView.isHidden = true
-        
     }
     
-    private func launchTimerToLetEverythingLoad() {
-        
-        self.findPizzas()
-        sleep(2);
-        self.findClosestPizza()
-        
-    }
-    
-    
-    @IBAction func getPizzaButtonPressed(_ sender: Any) {
+    func findAllTheTacos() {
         
         self.indicatorView.isHidden = false
         self.indicatorView.startAnimating()
         
-        // background // lane for time consuming tasks
+        // background lane for time consuming tasks
         DispatchQueue.global().async {
             
-            self.launchTimerToLetEverythingLoad()
-            
+            self.getGoogleData()
+            sleep(2)
             // switch to the main thread to run UI specific tasks
             DispatchQueue.main.async {
                 self.indicatorView.stopAnimating()
                 self.indicatorView.isHidden = true
                 
-                
-                guard let distance = self.closestPizza.distanceFromUser else {
-                    return
-                }
-                
-                let distanceInMiles = String(format: "%.2f", distance / 1609.34)
-                
-                
-                // Create the alert controller
-                let alertController = UIAlertController(title: "Pizza Found!", message:  "\(self.closestPizza.name!): \(distanceInMiles) miles away", preferredStyle: .alert)
-                
-                // Create the actions
-                let getPizzaAction = UIAlertAction(title: "Get Directions", style: UIAlertActionStyle.default) {
-                    UIAlertAction in
-                    //self.performSegue(withIdentifier: "MapSegue", sender: self)
+                if self.locations.count == 0 {
                     
-                    let url  = NSURL(string: "http://maps.apple.com/?q=\(self.closestPizza.coordinate.coordinate.latitude),\(self.closestPizza.coordinate.coordinate.longitude)")
                     
-                    if UIApplication.shared.canOpenURL(url! as URL) == true {
-                        UIApplication.shared.open(url as! URL)
+                    // Create the alert controller
+                    let alertController = UIAlertController(title: "No Taco Found", message:  "☹️", preferredStyle: .alert)
+                    
+                    // Create the actions
+                    
+                    let cancelAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                        UIAlertAction in
                         
+                        self.locations.removeAll()
                     }
-                }
-                let morePizzaAction = UIAlertAction(title: "More Pizzas", style: UIAlertActionStyle.default) {
-                    UIAlertAction in
-                    self.performSegue(withIdentifier: "MapSegue", sender: self)
+                    
+                    // Add the actions
+                    alertController.addAction(cancelAction)
+                    
+                    // Present the controller
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    
+                    let closestTaco = self.locations[0]
+                    
+                    guard let distance = closestTaco.distanceFromUser else {
+                        return
+                    }
+                    
+                    let distanceInMiles = String(format: "%.2f", distance / 1609.34)
+                    
+                    
+                    // Create the alert controller
+                    let alertController = UIAlertController(title: "Taco Found!", message:  "Closest Taco: \n \(closestTaco.name!) \n \(distanceInMiles) miles away", preferredStyle: .alert)
+                    
+                    // Create the actions
+                    let moreTacoAction = UIAlertAction(title: "🌮", style: UIAlertActionStyle.default) {
+                        UIAlertAction in
+                        
+                        self.performSegue(withIdentifier: "GoogleMapsSegue", sender: self)
+                    }
+                    let cancelAction = UIAlertAction(title: "🚫", style: UIAlertActionStyle.cancel) {
+                        UIAlertAction in
+                        
+                        self.locations.removeAll()
+                    }
+                    
+                    // Add the actions
+                    alertController.addAction(moreTacoAction)
+                    alertController.addAction(cancelAction)
+                    
+                    // Present the controller
+                    self.present(alertController, animated: true, completion: nil)
                     
                 }
-                let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
-                    UIAlertAction in
-                    
-                }
-                
-                // Add the actions
-                alertController.addAction(getPizzaAction)
-                alertController.addAction(morePizzaAction)
-                alertController.addAction(cancelAction)
-                
-                // Present the controller
-                self.present(alertController, animated: true, completion: nil)
-                
-                
-            }
-        }
-        
-        
-    }
-    
-    func findPizzas() {
-        let categoryRequest = MKLocalSearchRequest()
-        
-        categoryRequest.naturalLanguageQuery = "pizza"
-        
-        let region = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 250, 250)
-        
-        categoryRequest.region = region
-        
-        let search = MKLocalSearch(request: categoryRequest)
-        search.start { (response :MKLocalSearchResponse?, error: Error?) in
-            
-            for requestItem in (response?.mapItems)! {
-                
-                let pizzaLocation = PizzaLocation()
-                pizzaLocation.name = requestItem.name
-                pizzaLocation.coordinate = requestItem.placemark.location
-                pizzaLocation.address = requestItem.placemark.addressDictionary?["FormattedAddressLines"] as! [String]
-                pizzaLocation.street = requestItem.placemark.addressDictionary?["Street"] as! String!
-                pizzaLocation.city = requestItem.placemark.addressDictionary?["City"] as! String
-                pizzaLocation.state = requestItem.placemark.addressDictionary?["State"] as! String
-                pizzaLocation.zip = requestItem.placemark.addressDictionary?["ZIP"] as! String
-                
-                self.pizzaLocations.append(pizzaLocation)
-            }
-        }
-        
-    }
-    
-    //Finding the location that is closest to the user
-    func findClosestPizza() {
-        
-        var distances = [Double]()
-        
-        //looping to get all the location distance from user
-        for locationDistance in self.pizzaLocations {
-            
-            let distance = self.locationManager.location?.distance(from: locationDistance.coordinate)
-            locationDistance.distanceFromUser = distance as Double!
-            distances.append(distance!)
-            
-        }
-        
-        let minDistance = distances.min()
-        
-        //setting the closest location object to the location with the closest distance
-        for location in self.pizzaLocations {
-            
-            if self.locationManager.location?.distance(from: location.coordinate) == minDistance {
-                self.closestPizza = location
             }
         }
     }
     
-    //Custom segue
+    
+    @IBAction func getTacoButtonPressed(_ sender: Any) {
+        self.findAllTheTacos()
+    }
+    
+    //MARK: Custom segue
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return nil
@@ -169,15 +125,104 @@ class PizzaMeViewController: UIViewController, CLLocationManagerDelegate, UIView
         return self.fadeTransition
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let mapVC = segue.destination as! MapViewController
-        mapVC.transitioningDelegate = self
-        
+        if segue.identifier == "GoogleMapsSegue" {
+            
+            let navController = segue.destination as! UINavigationController
+            let mapVC = navController.topViewController as! GoogleMapsViewController
+            mapVC.locations = self.locations
+            
+            navController.transitioningDelegate = self
+        }
     }
     
+    //Mark: API GET request
     
+    func getGoogleData() {
+        
+        guard let lat = self.locationManager.location?.coordinate.latitude else {
+            return
+        }
+        
+        guard let lng = self.locationManager.location?.coordinate.longitude else {
+            return
+        }
+        
+        let headers = [
+            "cache-control": "no-cache",
+            ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat)%2C\(lng)%0A&radius=2000&type=resturant&keyword=pizza&pagetoken&key=AIzaSyCq15vCHdT2hrT0oOrCQE18aQvkWh2i-eI")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            
+            if (error != nil) {
+                print(error!)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse!)
+            }
+            
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+            
+            let results = json["results"] as! [[String:Any]]
+            
+            for item in results {
+                
+                let geometry = item["geometry"] as! [String:Any]
+                let location = geometry["location"] as! [String:Any]
+                
+                let name = item["name"] as? String
+                let locationLat = location["lat"] as? Double
+                let locationLng = location["lng"] as? Double
+                let place_id = item["place_id"] as? String
+                let price_level = item["price_level"] as? Int
+                let rating = item["rating"] as? Double
+                let vicinity = item["vicinity"] as? String
+                
+                let itemLocation = Location()
+                
+                if let opening_hours = item["opening_hours"] {
+                    let openingHours = opening_hours as! [String:Any]
+                    if let open_now = openingHours["open_now"] {
+                        itemLocation.open_now = open_now as? Bool
+                    }
+                }
+                
+                itemLocation.locationLat = locationLat
+                itemLocation.locationLng = locationLng
+                itemLocation.name = name
+                itemLocation.place_id = place_id
+                itemLocation.price_level = price_level
+                itemLocation.rating = rating
+                itemLocation.vicinity = vicinity
+                
+                self.locations.append(itemLocation)
+            }
+            
+            print(self.locations.count)
+            self.findClosestTaco()
+        })
+        dataTask.resume()
+    }
     
+    //Finding the location that is closest to the user
+    func findClosestTaco() {
+        
+        var distances = [Double]()
+        //looping to get all the location distance from user
+        for location in self.locations {
+            let distance = self.locationManager.location?.distance(from: CLLocation(latitude: CLLocationDegrees(location.locationLat!), longitude: CLLocationDegrees(location.locationLng!)))
+            location.distanceFromUser = distance as Double!
+            distances.append(distance!)
+        }
+        self.locations.sort(by: {$0.distanceFromUser! < $1.distanceFromUser!})
+    }
     
 }

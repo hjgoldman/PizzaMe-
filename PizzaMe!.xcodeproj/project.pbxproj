@@ -12,14 +12,45 @@
 		C68720051E8207A700351017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68720031E8207A700351017 /* Main.storyboard */; };
 		C68720071E8207A700351017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68720061E8207A700351017 /* Assets.xcassets */; };
 		C687200A1E8207A700351017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68720081E8207A700351017 /* LaunchScreen.storyboard */; };
-		C68720141E82089400351017 /* PizzaLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720131E82089400351017 /* PizzaLocation.swift */; };
+		C68720141E82089400351017 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720131E82089400351017 /* Location.swift */; };
 		C68720161E8208A600351017 /* PizzaMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720151E8208A600351017 /* PizzaMeViewController.swift */; };
-		C68720181E8208B500351017 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720171E8208B500351017 /* MapViewController.swift */; };
+		C68720181E8208B500351017 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720171E8208B500351017 /* GoogleMapsViewController.swift */; };
 		C687201B1E820AB700351017 /* pizza_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C68720191E820AB700351017 /* pizza_annotation.png */; };
 		C687201C1E820AB700351017 /* pizza_me.png in Resources */ = {isa = PBXBuildFile; fileRef = C687201A1E820AB700351017 /* pizza_me.png */; };
 		C68BE09F1E844FA500C3E643 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68BE09E1E844FA500C3E643 /* FadeTransition.swift */; };
 		C69B0D7A1EA9456E003FE233 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */; };
 		C69B0D7E1EA946F0003FE233 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D7D1EA946F0003FE233 /* UIColor+Additions.m */; };
+		C69B0D861EA94805003FE233 /* LocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D851EA94805003FE233 /* LocationAnnotationView.swift */; };
+		C69B0D881EA94812003FE233 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D871EA94812003FE233 /* LocationAnnotation.swift */; };
+		C69B0D8A1EA9486B003FE233 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D891EA9486B003FE233 /* ReviewTableViewCell.swift */; };
+		C69B0D8C1EA9488B003FE233 /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D8B1EA9488B003FE233 /* LocationDetail.swift */; };
+		C69B0D8E1EA948A5003FE233 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D8D1EA948A5003FE233 /* Review.swift */; };
+		C69B0D911EA948D0003FE233 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D8F1EA948D0003FE233 /* CustomInfoWindow.xib */; };
+		C69B0D921EA948D0003FE233 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D901EA948D0003FE233 /* CustomInfoWindow.swift */; };
+		C69B0D941EA949CE003FE233 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D931EA949CE003FE233 /* MoreInfoViewController.swift */; };
+		C69B0D961EA949E9003FE233 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D951EA949E9003FE233 /* ReviewViewController.swift */; };
+		C69B0D981EA94A06003FE233 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D971EA94A06003FE233 /* AddReviewViewController.swift */; };
+		C69B0D9A1EA94A1F003FE233 /* LocationDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D991EA94A1F003FE233 /* LocationDetailTabBarController.swift */; };
+		C69B0D9C1EA94A33003FE233 /* LocationARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69B0D9B1EA94A33003FE233 /* LocationARViewController.swift */; };
+		C69B0DB01EA94AB5003FE233 /* marker_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D9D1EA94AB5003FE233 /* marker_background.png */; };
+		C69B0DB11EA94AB5003FE233 /* thumb-up.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D9E1EA94AB5003FE233 /* thumb-up.png */; };
+		C69B0DB21EA94AB5003FE233 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0D9F1EA94AB5003FE233 /* info.png */; };
+		C69B0DB31EA94AB5003FE233 /* taco_me_text.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA01EA94AB5003FE233 /* taco_me_text.png */; };
+		C69B0DB41EA94AB5003FE233 /* review_icon_50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA11EA94AB5003FE233 /* review_icon_50x50.png */; };
+		C69B0DB51EA94AB5003FE233 /* Info_icon_50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA21EA94AB5003FE233 /* Info_icon_50x50.png */; };
+		C69B0DB61EA94AB5003FE233 /* powered_by_google_on_non_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA31EA94AB5003FE233 /* powered_by_google_on_non_white.png */; };
+		C69B0DB71EA94AB5003FE233 /* powered_by_google_on_non_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA41EA94AB5003FE233 /* powered_by_google_on_non_white@2x.png */; };
+		C69B0DB81EA94AB5003FE233 /* 2_5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA51EA94AB5003FE233 /* 2_5_stars.png */; };
+		C69B0DB91EA94AB5003FE233 /* 4_5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA61EA94AB5003FE233 /* 4_5_stars.png */; };
+		C69B0DBA1EA94AB5003FE233 /* 0_5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA71EA94AB5003FE233 /* 0_5_stars.png */; };
+		C69B0DBB1EA94AB5003FE233 /* 1_5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA81EA94AB5003FE233 /* 1_5_stars.png */; };
+		C69B0DBC1EA94AB5003FE233 /* 3_5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DA91EA94AB5003FE233 /* 3_5_stars.png */; };
+		C69B0DBD1EA94AB5003FE233 /* 0_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAA1EA94AB5003FE233 /* 0_stars.png */; };
+		C69B0DBE1EA94AB5003FE233 /* 4_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAB1EA94AB5003FE233 /* 4_stars.png */; };
+		C69B0DBF1EA94AB5003FE233 /* 1_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAC1EA94AB5003FE233 /* 1_stars.png */; };
+		C69B0DC01EA94AB5003FE233 /* 2_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAD1EA94AB5003FE233 /* 2_stars.png */; };
+		C69B0DC11EA94AB5003FE233 /* 3_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAE1EA94AB5003FE233 /* 3_stars.png */; };
+		C69B0DC21EA94AB5003FE233 /* 5_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DAF1EA94AB5003FE233 /* 5_stars.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +63,9 @@
 		C68720061E8207A700351017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C68720091E8207A700351017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C687200B1E8207A700351017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C68720131E82089400351017 /* PizzaLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaLocation.swift; sourceTree = "<group>"; };
+		C68720131E82089400351017 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C68720151E8208A600351017 /* PizzaMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaMeViewController.swift; sourceTree = "<group>"; };
-		C68720171E8208B500351017 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C68720171E8208B500351017 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		C68720191E820AB700351017 /* pizza_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_annotation.png; sourceTree = "<group>"; };
 		C687201A1E820AB700351017 /* pizza_me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_me.png; sourceTree = "<group>"; };
 		C68BE09E1E844FA500C3E643 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -42,6 +73,37 @@
 		C69B0D7B1EA946EF003FE233 /* PizzaMe!-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PizzaMe!-Bridging-Header.h"; sourceTree = "<group>"; };
 		C69B0D7C1EA946F0003FE233 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		C69B0D7D1EA946F0003FE233 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		C69B0D851EA94805003FE233 /* LocationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationView.swift; sourceTree = "<group>"; };
+		C69B0D871EA94812003FE233 /* LocationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		C69B0D891EA9486B003FE233 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C69B0D8B1EA9488B003FE233 /* LocationDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
+		C69B0D8D1EA948A5003FE233 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C69B0D8F1EA948D0003FE233 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		C69B0D901EA948D0003FE233 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
+		C69B0D931EA949CE003FE233 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		C69B0D951EA949E9003FE233 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C69B0D971EA94A06003FE233 /* AddReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		C69B0D991EA94A1F003FE233 /* LocationDetailTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailTabBarController.swift; sourceTree = "<group>"; };
+		C69B0D9B1EA94A33003FE233 /* LocationARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationARViewController.swift; sourceTree = "<group>"; };
+		C69B0D9D1EA94AB5003FE233 /* marker_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_background.png; sourceTree = "<group>"; };
+		C69B0D9E1EA94AB5003FE233 /* thumb-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-up.png"; sourceTree = "<group>"; };
+		C69B0D9F1EA94AB5003FE233 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		C69B0DA01EA94AB5003FE233 /* taco_me_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco_me_text.png; sourceTree = "<group>"; };
+		C69B0DA11EA94AB5003FE233 /* review_icon_50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = review_icon_50x50.png; sourceTree = "<group>"; };
+		C69B0DA21EA94AB5003FE233 /* Info_icon_50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_icon_50x50.png; sourceTree = "<group>"; };
+		C69B0DA31EA94AB5003FE233 /* powered_by_google_on_non_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powered_by_google_on_non_white.png; sourceTree = "<group>"; };
+		C69B0DA41EA94AB5003FE233 /* powered_by_google_on_non_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered_by_google_on_non_white@2x.png"; sourceTree = "<group>"; };
+		C69B0DA51EA94AB5003FE233 /* 2_5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_5_stars.png; sourceTree = "<group>"; };
+		C69B0DA61EA94AB5003FE233 /* 4_5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_5_stars.png; sourceTree = "<group>"; };
+		C69B0DA71EA94AB5003FE233 /* 0_5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0_5_stars.png; sourceTree = "<group>"; };
+		C69B0DA81EA94AB5003FE233 /* 1_5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_5_stars.png; sourceTree = "<group>"; };
+		C69B0DA91EA94AB5003FE233 /* 3_5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_5_stars.png; sourceTree = "<group>"; };
+		C69B0DAA1EA94AB5003FE233 /* 0_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0_stars.png; sourceTree = "<group>"; };
+		C69B0DAB1EA94AB5003FE233 /* 4_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_stars.png; sourceTree = "<group>"; };
+		C69B0DAC1EA94AB5003FE233 /* 1_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_stars.png; sourceTree = "<group>"; };
+		C69B0DAD1EA94AB5003FE233 /* 2_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_stars.png; sourceTree = "<group>"; };
+		C69B0DAE1EA94AB5003FE233 /* 3_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_stars.png; sourceTree = "<group>"; };
+		C69B0DAF1EA94AB5003FE233 /* 5_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5_stars.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,18 +156,21 @@
 		C6871FFE1E8207A700351017 /* PizzaMe! */ = {
 			isa = PBXGroup;
 			children = (
-				C69B0D7F1EA94716003FE233 /* UIColor - hex */,
+				C69B0D7F1EA94716003FE233 /* HexColors */,
+				C69B0D801EA94781003FE233 /* Custom Transition */,
+				C69B0D811EA9478C003FE233 /* AR Custom Annotation */,
+				C69B0D821EA94794003FE233 /* Custom Cell */,
+				C69B0D831EA9479C003FE233 /* Objects */,
+				C69B0D841EA947A2003FE233 /* Pizza Custom Marker */,
 				C68720111E82086A00351017 /* ViewControllers */,
 				C68720121E82087800351017 /* Images */,
 				C6871FFF1E8207A700351017 /* AppDelegate.swift */,
 				C68720031E8207A700351017 /* Main.storyboard */,
 				C68720061E8207A700351017 /* Assets.xcassets */,
 				C68720081E8207A700351017 /* LaunchScreen.storyboard */,
-				C687200B1E8207A700351017 /* Info.plist */,
-				C68720131E82089400351017 /* PizzaLocation.swift */,
-				C68BE09E1E844FA500C3E643 /* FadeTransition.swift */,
-				C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */,
 				C69B0D7B1EA946EF003FE233 /* PizzaMe!-Bridging-Header.h */,
+				C687200B1E8207A700351017 /* Info.plist */,
+				C69B0D791EA9456E003FE233 /* GoogleService-Info.plist */,
 			);
 			path = "PizzaMe!";
 			sourceTree = "<group>";
@@ -114,7 +179,12 @@
 			isa = PBXGroup;
 			children = (
 				C68720151E8208A600351017 /* PizzaMeViewController.swift */,
-				C68720171E8208B500351017 /* MapViewController.swift */,
+				C68720171E8208B500351017 /* GoogleMapsViewController.swift */,
+				C69B0D931EA949CE003FE233 /* MoreInfoViewController.swift */,
+				C69B0D951EA949E9003FE233 /* ReviewViewController.swift */,
+				C69B0D971EA94A06003FE233 /* AddReviewViewController.swift */,
+				C69B0D991EA94A1F003FE233 /* LocationDetailTabBarController.swift */,
+				C69B0D9B1EA94A33003FE233 /* LocationARViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -122,19 +192,82 @@
 		C68720121E82087800351017 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C69B0D9D1EA94AB5003FE233 /* marker_background.png */,
+				C69B0D9E1EA94AB5003FE233 /* thumb-up.png */,
+				C69B0D9F1EA94AB5003FE233 /* info.png */,
+				C69B0DA01EA94AB5003FE233 /* taco_me_text.png */,
+				C69B0DA11EA94AB5003FE233 /* review_icon_50x50.png */,
+				C69B0DA21EA94AB5003FE233 /* Info_icon_50x50.png */,
+				C69B0DA31EA94AB5003FE233 /* powered_by_google_on_non_white.png */,
+				C69B0DA41EA94AB5003FE233 /* powered_by_google_on_non_white@2x.png */,
+				C69B0DA51EA94AB5003FE233 /* 2_5_stars.png */,
+				C69B0DA61EA94AB5003FE233 /* 4_5_stars.png */,
+				C69B0DA71EA94AB5003FE233 /* 0_5_stars.png */,
+				C69B0DA81EA94AB5003FE233 /* 1_5_stars.png */,
+				C69B0DA91EA94AB5003FE233 /* 3_5_stars.png */,
+				C69B0DAA1EA94AB5003FE233 /* 0_stars.png */,
+				C69B0DAB1EA94AB5003FE233 /* 4_stars.png */,
+				C69B0DAC1EA94AB5003FE233 /* 1_stars.png */,
+				C69B0DAD1EA94AB5003FE233 /* 2_stars.png */,
+				C69B0DAE1EA94AB5003FE233 /* 3_stars.png */,
+				C69B0DAF1EA94AB5003FE233 /* 5_stars.png */,
 				C68720191E820AB700351017 /* pizza_annotation.png */,
 				C687201A1E820AB700351017 /* pizza_me.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
 		};
-		C69B0D7F1EA94716003FE233 /* UIColor - hex */ = {
+		C69B0D7F1EA94716003FE233 /* HexColors */ = {
 			isa = PBXGroup;
 			children = (
 				C69B0D7C1EA946F0003FE233 /* UIColor+Additions.h */,
 				C69B0D7D1EA946F0003FE233 /* UIColor+Additions.m */,
 			);
-			name = "UIColor - hex";
+			name = HexColors;
+			sourceTree = "<group>";
+		};
+		C69B0D801EA94781003FE233 /* Custom Transition */ = {
+			isa = PBXGroup;
+			children = (
+				C68BE09E1E844FA500C3E643 /* FadeTransition.swift */,
+			);
+			name = "Custom Transition";
+			sourceTree = "<group>";
+		};
+		C69B0D811EA9478C003FE233 /* AR Custom Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				C69B0D851EA94805003FE233 /* LocationAnnotationView.swift */,
+				C69B0D871EA94812003FE233 /* LocationAnnotation.swift */,
+			);
+			name = "AR Custom Annotation";
+			sourceTree = "<group>";
+		};
+		C69B0D821EA94794003FE233 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C69B0D891EA9486B003FE233 /* ReviewTableViewCell.swift */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		C69B0D831EA9479C003FE233 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C69B0D8B1EA9488B003FE233 /* LocationDetail.swift */,
+				C68720131E82089400351017 /* Location.swift */,
+				C69B0D8D1EA948A5003FE233 /* Review.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		C69B0D841EA947A2003FE233 /* Pizza Custom Marker */ = {
+			isa = PBXGroup;
+			children = (
+				C69B0D8F1EA948D0003FE233 /* CustomInfoWindow.xib */,
+				C69B0D901EA948D0003FE233 /* CustomInfoWindow.swift */,
+			);
+			name = "Pizza Custom Marker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,10 +335,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C687200A1E8207A700351017 /* LaunchScreen.storyboard in Resources */,
+				C69B0DB21EA94AB5003FE233 /* info.png in Resources */,
+				C69B0DBA1EA94AB5003FE233 /* 0_5_stars.png in Resources */,
+				C69B0DBC1EA94AB5003FE233 /* 3_5_stars.png in Resources */,
+				C69B0DB91EA94AB5003FE233 /* 4_5_stars.png in Resources */,
+				C69B0DB81EA94AB5003FE233 /* 2_5_stars.png in Resources */,
+				C69B0DB01EA94AB5003FE233 /* marker_background.png in Resources */,
+				C69B0D911EA948D0003FE233 /* CustomInfoWindow.xib in Resources */,
+				C69B0DB71EA94AB5003FE233 /* powered_by_google_on_non_white@2x.png in Resources */,
 				C687201C1E820AB700351017 /* pizza_me.png in Resources */,
+				C69B0DB11EA94AB5003FE233 /* thumb-up.png in Resources */,
+				C69B0DC21EA94AB5003FE233 /* 5_stars.png in Resources */,
 				C68720071E8207A700351017 /* Assets.xcassets in Resources */,
+				C69B0DC01EA94AB5003FE233 /* 2_stars.png in Resources */,
+				C69B0DC11EA94AB5003FE233 /* 3_stars.png in Resources */,
+				C69B0DBF1EA94AB5003FE233 /* 1_stars.png in Resources */,
+				C69B0DB41EA94AB5003FE233 /* review_icon_50x50.png in Resources */,
 				C68720051E8207A700351017 /* Main.storyboard in Resources */,
+				C69B0DBE1EA94AB5003FE233 /* 4_stars.png in Resources */,
+				C69B0DBD1EA94AB5003FE233 /* 0_stars.png in Resources */,
+				C69B0DB61EA94AB5003FE233 /* powered_by_google_on_non_white.png in Resources */,
+				C69B0DBB1EA94AB5003FE233 /* 1_5_stars.png in Resources */,
+				C69B0DB31EA94AB5003FE233 /* taco_me_text.png in Resources */,
 				C687201B1E820AB700351017 /* pizza_annotation.png in Resources */,
+				C69B0DB51EA94AB5003FE233 /* Info_icon_50x50.png in Resources */,
 				C69B0D7A1EA9456E003FE233 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +420,21 @@
 			files = (
 				C68720001E8207A700351017 /* AppDelegate.swift in Sources */,
 				C68BE09F1E844FA500C3E643 /* FadeTransition.swift in Sources */,
+				C69B0D961EA949E9003FE233 /* ReviewViewController.swift in Sources */,
+				C69B0D981EA94A06003FE233 /* AddReviewViewController.swift in Sources */,
 				C68720161E8208A600351017 /* PizzaMeViewController.swift in Sources */,
-				C68720141E82089400351017 /* PizzaLocation.swift in Sources */,
-				C68720181E8208B500351017 /* MapViewController.swift in Sources */,
+				C69B0D9C1EA94A33003FE233 /* LocationARViewController.swift in Sources */,
+				C69B0D861EA94805003FE233 /* LocationAnnotationView.swift in Sources */,
+				C69B0D921EA948D0003FE233 /* CustomInfoWindow.swift in Sources */,
+				C68720141E82089400351017 /* Location.swift in Sources */,
+				C68720181E8208B500351017 /* GoogleMapsViewController.swift in Sources */,
+				C69B0D8E1EA948A5003FE233 /* Review.swift in Sources */,
 				C69B0D7E1EA946F0003FE233 /* UIColor+Additions.m in Sources */,
+				C69B0D9A1EA94A1F003FE233 /* LocationDetailTabBarController.swift in Sources */,
+				C69B0D8A1EA9486B003FE233 /* ReviewTableViewCell.swift in Sources */,
+				C69B0D881EA94812003FE233 /* LocationAnnotation.swift in Sources */,
+				C69B0D8C1EA9488B003FE233 /* LocationDetail.swift in Sources */,
+				C69B0D941EA949CE003FE233 /* MoreInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
