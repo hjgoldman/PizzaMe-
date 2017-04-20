@@ -278,7 +278,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="158" id="h92-AP-wyJ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
