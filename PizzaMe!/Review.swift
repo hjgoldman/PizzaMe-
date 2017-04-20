@@ -16,6 +16,6 @@ class Review {
     var isPizzaMeReview :Bool?
     
     func toDictionary() -> [String:Any] {
-        return ["rating":self.rating!,"relative_time_description":self.relative_time_description!,"text":self.text!,"author_name":self.author_name!,"isTacoMeReview":self.isPizzaMeReview!]
+        return ["rating":self.rating!,"relative_time_description":self.relative_time_description!,"text":self.text!,"author_name":self.author_name!,"isPizzaMeReview":self.isPizzaMeReview!]
     }
 }
