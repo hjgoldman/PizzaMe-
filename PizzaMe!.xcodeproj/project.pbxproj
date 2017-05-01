@@ -15,6 +15,10 @@
 		C623FB491EB79C2600099C9D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */; };
 		C623FB4B1EB79C2600099C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C623FB4A1EB79C2600099C9D /* Assets.xcassets */; };
 		C623FB4F1EB79C2600099C9D /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C623FB351EB79C2500099C9D /* Watch.app */; };
+		C623FB581EB79DD600099C9D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720131E82089400351017 /* Location.swift */; };
+		C623FB5A1EB79FE500099C9D /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB591EB79FE500099C9D /* MapInterfaceController.swift */; };
+		C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
+		C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
 		C68720001E8207A700351017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6871FFF1E8207A700351017 /* AppDelegate.swift */; };
 		C68720051E8207A700351017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68720031E8207A700351017 /* Main.storyboard */; };
 		C68720071E8207A700351017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68720061E8207A700351017 /* Assets.xcassets */; };
@@ -116,6 +120,8 @@
 		C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C623FB4A1EB79C2600099C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C623FB4C1EB79C2600099C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C623FB591EB79FE500099C9D /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
+		C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_marker_watch.png; sourceTree = "<group>"; };
 		C6871FFC1E8207A700351017 /* PizzaMe!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PizzaMe!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6871FFF1E8207A700351017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C68720041E8207A700351017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -215,12 +221,22 @@
 		C623FB451EB79C2600099C9D /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C623FB5B1EB7A0B400099C9D /* images */,
 				C623FB461EB79C2600099C9D /* InterfaceController.swift */,
+				C623FB591EB79FE500099C9D /* MapInterfaceController.swift */,
 				C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */,
 				C623FB4A1EB79C2600099C9D /* Assets.xcassets */,
 				C623FB4C1EB79C2600099C9D /* Info.plist */,
 			);
 			path = "Watch Extension";
+			sourceTree = "<group>";
+		};
+		C623FB5B1EB7A0B400099C9D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		C6871FF31E8207A700351017 = {
@@ -435,6 +451,7 @@
 					C623FB341EB79C2500099C9D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5UN8LHXK2J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					C623FB401EB79C2600099C9D = {
@@ -477,6 +494,7 @@
 			files = (
 				C623FB3B1EB79C2600099C9D /* Assets.xcassets in Resources */,
 				C623FB391EB79C2600099C9D /* Interface.storyboard in Resources */,
+				C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
 				C623FB4B1EB79C2600099C9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +597,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C623FB491EB79C2600099C9D /* ExtensionDelegate.swift in Sources */,
+				C623FB581EB79DD600099C9D /* Location.swift in Sources */,
+				C623FB5A1EB79FE500099C9D /* MapInterfaceController.swift in Sources */,
 				C623FB471EB79C2600099C9D /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,13 +712,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5UN8LHXK2J;
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
@@ -710,9 +734,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5UN8LHXK2J;
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
