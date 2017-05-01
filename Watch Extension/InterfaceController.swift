@@ -46,7 +46,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     
     @IBAction func tacoTap(_ sender: Any) {
         
-        print("taco has been tapped")
+        print("pizza has been tapped")
         self.tacoAnimationWithResults()
         
     }
