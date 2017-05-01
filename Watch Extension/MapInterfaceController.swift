@@ -29,15 +29,15 @@ class MapInterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
-        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        let coordinateRegion = MKCoordinateRegion(center: (self.locationManager.location?.coordinate)!, span: coordinateSpan)
-        
-        map.setRegion(coordinateRegion)
-        
         if let closestPizza = context as? Location {
             self.closestPizza = closestPizza
             let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees((self.closestPizza?.locationLat)!), longitude: CLLocationDegrees((self.closestPizza?.locationLng)!))
-            map.addAnnotation(coordinate, withImageNamed: "pizza_marker_watch.png", centerOffset: CGPoint(x: 0, y: 0))
+            
+            let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            let coordinateRegion = MKCoordinateRegion(center: coordinate, span: coordinateSpan)
+            map.setRegion(coordinateRegion)
+            
+            map.addAnnotation(coordinate, withImageNamed: "pizza_marker.png", centerOffset: CGPoint(x: 0, y: 0))
         }
         
     }

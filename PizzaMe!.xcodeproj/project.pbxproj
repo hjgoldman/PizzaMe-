@@ -19,6 +19,8 @@
 		C623FB5A1EB79FE500099C9D /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB591EB79FE500099C9D /* MapInterfaceController.swift */; };
 		C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
 		C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
+		C623FB5F1EB7A4D600099C9D /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
+		C623FB601EB7A4D600099C9D /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
 		C68720001E8207A700351017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6871FFF1E8207A700351017 /* AppDelegate.swift */; };
 		C68720051E8207A700351017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68720031E8207A700351017 /* Main.storyboard */; };
 		C68720071E8207A700351017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68720061E8207A700351017 /* Assets.xcassets */; };
@@ -494,6 +496,7 @@
 			files = (
 				C623FB3B1EB79C2600099C9D /* Assets.xcassets in Resources */,
 				C623FB391EB79C2600099C9D /* Interface.storyboard in Resources */,
+				C623FB601EB7A4D600099C9D /* pizza_marker.png in Resources */,
 				C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
+				C623FB5F1EB7A4D600099C9D /* pizza_marker.png in Resources */,
 				C623FB4B1EB79C2600099C9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
