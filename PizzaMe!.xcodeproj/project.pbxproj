@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		80A2FCA7362AB76C9132C8D0 /* Pods_PizzaMe_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94238C4CAD8DEE4EE3B39231 /* Pods_PizzaMe_.framework */; };
+		C623FB391EB79C2600099C9D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C623FB371EB79C2600099C9D /* Interface.storyboard */; };
+		C623FB3B1EB79C2600099C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C623FB3A1EB79C2600099C9D /* Assets.xcassets */; };
+		C623FB421EB79C2600099C9D /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C623FB411EB79C2600099C9D /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C623FB471EB79C2600099C9D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB461EB79C2600099C9D /* InterfaceController.swift */; };
+		C623FB491EB79C2600099C9D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */; };
+		C623FB4B1EB79C2600099C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C623FB4A1EB79C2600099C9D /* Assets.xcassets */; };
+		C623FB4F1EB79C2600099C9D /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C623FB351EB79C2500099C9D /* Watch.app */; };
+		C623FB581EB79DD600099C9D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68720131E82089400351017 /* Location.swift */; };
+		C623FB5A1EB79FE500099C9D /* MapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623FB591EB79FE500099C9D /* MapInterfaceController.swift */; };
+		C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
+		C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */; };
+		C623FB5F1EB7A4D600099C9D /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
+		C623FB601EB7A4D600099C9D /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
 		C68720001E8207A700351017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6871FFF1E8207A700351017 /* AppDelegate.swift */; };
 		C68720051E8207A700351017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68720031E8207A700351017 /* Main.storyboard */; };
 		C68720071E8207A700351017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68720061E8207A700351017 /* Assets.xcassets */; };
@@ -54,10 +67,63 @@
 		C69B0DC41EA95111003FE233 /* pizza_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C69B0DC31EA95111003FE233 /* pizza_marker.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C623FB431EB79C2600099C9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6871FF41E8207A700351017 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C623FB401EB79C2600099C9D;
+			remoteInfo = "Watch Extension";
+		};
+		C623FB4D1EB79C2600099C9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6871FF41E8207A700351017 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C623FB341EB79C2500099C9D;
+			remoteInfo = Watch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C623FB531EB79C2600099C9D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C623FB421EB79C2600099C9D /* Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C623FB571EB79C2600099C9D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C623FB4F1EB79C2600099C9D /* Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		458551585854A6D9656BDA87 /* Pods-PizzaMe!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaMe!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaMe!/Pods-PizzaMe!.debug.xcconfig"; sourceTree = "<group>"; };
 		903B25A89BB16FD9226C7226 /* Pods-PizzaMe!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaMe!.release.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaMe!/Pods-PizzaMe!.release.xcconfig"; sourceTree = "<group>"; };
 		94238C4CAD8DEE4EE3B39231 /* Pods_PizzaMe_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaMe_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C623FB351EB79C2500099C9D /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C623FB381EB79C2600099C9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C623FB3A1EB79C2600099C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C623FB3C1EB79C2600099C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C623FB411EB79C2600099C9D /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C623FB461EB79C2600099C9D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C623FB4A1EB79C2600099C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C623FB4C1EB79C2600099C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C623FB591EB79FE500099C9D /* MapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInterfaceController.swift; sourceTree = "<group>"; };
+		C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza_marker_watch.png; sourceTree = "<group>"; };
 		C6871FFC1E8207A700351017 /* PizzaMe!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PizzaMe!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6871FFF1E8207A700351017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C68720041E8207A700351017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +175,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C623FB3E1EB79C2600099C9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6871FF91E8207A700351017 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,10 +210,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C623FB361EB79C2600099C9D /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				C623FB371EB79C2600099C9D /* Interface.storyboard */,
+				C623FB3A1EB79C2600099C9D /* Assets.xcassets */,
+				C623FB3C1EB79C2600099C9D /* Info.plist */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		C623FB451EB79C2600099C9D /* Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C623FB5B1EB7A0B400099C9D /* images */,
+				C623FB461EB79C2600099C9D /* InterfaceController.swift */,
+				C623FB591EB79FE500099C9D /* MapInterfaceController.swift */,
+				C623FB481EB79C2600099C9D /* ExtensionDelegate.swift */,
+				C623FB4A1EB79C2600099C9D /* Assets.xcassets */,
+				C623FB4C1EB79C2600099C9D /* Info.plist */,
+			);
+			path = "Watch Extension";
+			sourceTree = "<group>";
+		};
+		C623FB5B1EB7A0B400099C9D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C623FB5C1EB7A0C000099C9D /* pizza_marker_watch.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		C6871FF31E8207A700351017 = {
 			isa = PBXGroup;
 			children = (
 				C6871FFE1E8207A700351017 /* PizzaMe! */,
+				C623FB361EB79C2600099C9D /* Watch */,
+				C623FB451EB79C2600099C9D /* Watch Extension */,
 				C6871FFD1E8207A700351017 /* Products */,
 				267D59BCB3DEB962FD3E9A78 /* Pods */,
 				C55C054C418660B13EE9261D /* Frameworks */,
@@ -151,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				C6871FFC1E8207A700351017 /* PizzaMe!.app */,
+				C623FB351EB79C2500099C9D /* Watch.app */,
+				C623FB411EB79C2600099C9D /* Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,6 +384,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C623FB341EB79C2500099C9D /* Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C623FB541EB79C2600099C9D /* Build configuration list for PBXNativeTarget "Watch" */;
+			buildPhases = (
+				C623FB331EB79C2500099C9D /* Resources */,
+				C623FB531EB79C2600099C9D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C623FB441EB79C2600099C9D /* PBXTargetDependency */,
+			);
+			name = Watch;
+			productName = Watch;
+			productReference = C623FB351EB79C2500099C9D /* Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C623FB401EB79C2600099C9D /* Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C623FB501EB79C2600099C9D /* Build configuration list for PBXNativeTarget "Watch Extension" */;
+			buildPhases = (
+				C623FB3D1EB79C2600099C9D /* Sources */,
+				C623FB3E1EB79C2600099C9D /* Frameworks */,
+				C623FB3F1EB79C2600099C9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Extension";
+			productName = "Watch Extension";
+			productReference = C623FB411EB79C2600099C9D /* Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		C6871FFB1E8207A700351017 /* PizzaMe! */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C687200E1E8207A700351017 /* Build configuration list for PBXNativeTarget "PizzaMe!" */;
@@ -286,10 +428,12 @@
 				C6871FFA1E8207A700351017 /* Resources */,
 				A522FDD8DD4865CC88012C80 /* [CP] Embed Pods Frameworks */,
 				08D8ADC28C5EBA70A2FC0062 /* [CP] Copy Pods Resources */,
+				C623FB571EB79C2600099C9D /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C623FB4E1EB79C2600099C9D /* PBXTargetDependency */,
 			);
 			name = "PizzaMe!";
 			productName = "PizzaMe!";
@@ -302,10 +446,21 @@
 		C6871FF41E8207A700351017 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Hayden Goldman";
 				TargetAttributes = {
+					C623FB341EB79C2500099C9D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UN8LHXK2J;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					C623FB401EB79C2600099C9D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UN8LHXK2J;
+						ProvisioningStyle = Automatic;
+					};
 					C6871FFB1E8207A700351017 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5UN8LHXK2J;
@@ -328,11 +483,34 @@
 			projectRoot = "";
 			targets = (
 				C6871FFB1E8207A700351017 /* PizzaMe! */,
+				C623FB341EB79C2500099C9D /* Watch */,
+				C623FB401EB79C2600099C9D /* Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C623FB331EB79C2500099C9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C623FB3B1EB79C2600099C9D /* Assets.xcassets in Resources */,
+				C623FB391EB79C2600099C9D /* Interface.storyboard in Resources */,
+				C623FB601EB7A4D600099C9D /* pizza_marker.png in Resources */,
+				C623FB5D1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C623FB3F1EB79C2600099C9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C623FB5E1EB7A0C000099C9D /* pizza_marker_watch.png in Resources */,
+				C623FB5F1EB7A4D600099C9D /* pizza_marker.png in Resources */,
+				C623FB4B1EB79C2600099C9D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6871FFA1E8207A700351017 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +596,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C623FB3D1EB79C2600099C9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C623FB491EB79C2600099C9D /* ExtensionDelegate.swift in Sources */,
+				C623FB581EB79DD600099C9D /* Location.swift in Sources */,
+				C623FB5A1EB79FE500099C9D /* MapInterfaceController.swift in Sources */,
+				C623FB471EB79C2600099C9D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6871FF81E8207A700351017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,7 +633,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C623FB441EB79C2600099C9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C623FB401EB79C2600099C9D /* Watch Extension */;
+			targetProxy = C623FB431EB79C2600099C9D /* PBXContainerItemProxy */;
+		};
+		C623FB4E1EB79C2600099C9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C623FB341EB79C2500099C9D /* Watch */;
+			targetProxy = C623FB4D1EB79C2600099C9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C623FB371EB79C2600099C9D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C623FB381EB79C2600099C9D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		C68720031E8207A700351017 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -464,6 +674,85 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C623FB511EB79C2600099C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 5UN8LHXK2J;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C623FB521EB79C2600099C9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = 5UN8LHXK2J;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		C623FB551EB79C2600099C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5UN8LHXK2J;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C623FB561EB79C2600099C9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5UN8LHXK2J;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haydengoldman.PizzaMe-.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
 		C687200C1E8207A700351017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,7 +793,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -548,7 +837,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -595,6 +884,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C623FB501EB79C2600099C9D /* Build configuration list for PBXNativeTarget "Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C623FB511EB79C2600099C9D /* Debug */,
+				C623FB521EB79C2600099C9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C623FB541EB79C2600099C9D /* Build configuration list for PBXNativeTarget "Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C623FB551EB79C2600099C9D /* Debug */,
+				C623FB561EB79C2600099C9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C6871FF71E8207A700351017 /* Build configuration list for PBXProject "PizzaMe!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
