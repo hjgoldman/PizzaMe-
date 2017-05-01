@@ -57,7 +57,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         DispatchQueue.global().async {
             
             self.getGoogleData()
-            sleep(4)
+            sleep(5)
             
             DispatchQueue.main.async {
                 self.pizzaImage.stopAnimating()
